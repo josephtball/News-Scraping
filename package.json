@@ -1,0 +1,28 @@
+{
+  "name": "news-srcaper",
+  "version": "1.0.0",
+  "description": "Scrape news articles and save them to a database.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephtball/News-Scraping.git"
+  },
+  "author": "Joseph T. Ball",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephtball/News-Scraping/issues"
+  },
+  "homepage": "https://github.com/josephtball/News-Scraping#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.5",
+    "request": "^2.81.0"
+  }
+}
