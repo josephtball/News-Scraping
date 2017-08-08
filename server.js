@@ -26,7 +26,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + "/public"));
 
 app.use('/', htmlRoutes);
-app.use('/api/', apiRoutes);
+app.use('/api', apiRoutes);
 
 // setup server to listen
 app.listen(port, function() {

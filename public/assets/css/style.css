@@ -1,0 +1,43 @@
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+nav {
+	background-color: rgb(81, 115, 109);
+	color: white;
+}
+.navbar {
+	height: 3.5em;
+}
+.nav-left {
+	float: left;
+}
+.nav-right {
+	float: right;
+}
+.float-contain {
+	overflow: auto;
+}
+.brand {
+	display: inline-block;
+	color: white;
+	vertical-align: middle;
+	text-decoration: none;
+	font-size: 2em;
+	font-family: 'Permanent Marker', cursive;
+	padding-right: 10px;
+}
+.nav-link {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+}
+/*.button-alert {
+	color: white;
+	border-radius: 2px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}*/
+.button-alert {
+	background-color: rgb(166, 31, 18);
+	color: white;
+}
