@@ -3,6 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 // var methodOverride = require("method-override");
 var exphbs = require('express-handlebars');
+var mongoose = require('mongoose');
 
 // import files
 var htmlRoutes = require('./routes/htmlRoutes.js');
@@ -27,6 +28,17 @@ app.use(express.static(__dirname + "/public"));
 
 app.use('/', htmlRoutes);
 app.use('/api', apiRoutes);
+
+// setup connection to database
+mongoose.Promise = Promise;
+mongoose.connect('mongodb://heroku_nmsdrpwp:pi8pcfhjsqc5pk3qvbe2j6rlds@ds135382.mlab.com:35382/heroku_nmsdrpwp');
+var db = mongoose.connection;
+db.on('error', function(error) {
+	console.log('Mongoose error: ', error);
+});
+db.once('open', function() {
+	console.log('Mongoose connection successful.');
+});
 
 // setup server to listen
 app.listen(port, function() {
