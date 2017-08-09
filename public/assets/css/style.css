@@ -9,6 +9,9 @@ main {
 	font-size: 1.2em;
 	font-weight: 500;
 }
+.margin-right {
+	margin-right: 0.2em;
+}
 
 /* sticky footer */
 html {

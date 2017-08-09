@@ -1,7 +1,6 @@
 // node packages
 var express = require('express');
 var bodyParser = require('body-parser');
-// var methodOverride = require("method-override");
 var exphbs = require('express-handlebars');
 var mongoose = require('mongoose');
 
@@ -18,8 +17,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
-/*// Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));*/
 // handlebars
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -31,8 +28,8 @@ app.use('/api', apiRoutes);
 
 // setup connection to database
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://heroku_nmsdrpwp:pi8pcfhjsqc5pk3qvbe2j6rlds@ds135382.mlab.com:35382/heroku_nmsdrpwp');
-// mongoose.connect('mongodb://localhost/ScraperNewsdb');
+// mongoose.connect('mongodb://heroku_nmsdrpwp:pi8pcfhjsqc5pk3qvbe2j6rlds@ds135382.mlab.com:35382/heroku_nmsdrpwp');
+mongoose.connect('mongodb://localhost/ScraperNewsdb');
 var db = mongoose.connection;
 db.on('error', function(error) {
 	console.log('Mongoose error: ', error);

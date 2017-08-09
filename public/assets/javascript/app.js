@@ -43,10 +43,12 @@ $(document).on('click', '#saved-articles', function() {
 				.attr('target', '_blank')
 				.text(articles[i].title);
 			article.append(title);
-			var viewNotesButton = $('<button>').addClass('view-notes button').text('View Article Notes').attr('id', articles[i]._id);
-			var deleteButton = $('<button>').addClass('delete-article button').text('Delete from Saved Articles').attr('id', articles[i]._id);
-			article.append(viewNotesButton);
-			article.append(deleteButton);
+			var buttonDiv = $('<div>').addClass('level-right')
+			var viewNotesButton = $('<button>').addClass('view-notes button is-info margin-right').text('View Notes').attr('id', articles[i]._id);
+			var deleteButton = $('<button>').addClass('delete-article button is-danger').text('Delete Article').attr('id', articles[i]._id);
+			buttonDiv.append(viewNotesButton);
+			buttonDiv.append(deleteButton);
+			article.append(buttonDiv);
 			articlesDiv.append(article);
 		}
 	});
