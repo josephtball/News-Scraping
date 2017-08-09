@@ -1,29 +1,74 @@
-<nav>
+<nav class="navbar">
 	<div class="container">
-		<div class="navbar">
-			<a href="/" class="brand">Scraper News</a>
-			<a href="/" class="nav-link">Home</a>
-			<a href="/api/saved-articles" class="nav-link">Saved Articles</a>
-			<div class="nav-right">
-				<button id="scrape" class="button-alert" type="button"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Scrape New Articles</button>
+		<div class="navbar-brand">
+			<a href="/" class="navbar-item brand">Scraper News</a>
+		</div>
+		<div class="navbar-menu">
+			<div class="navbar-start">
+				<a id="saved-articles" class="navbar-item" type="button">Saved Articles</a>
+			</div>
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<a id="scrape" class="navbar-item button is-danger" type="button"><span class="icon"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span><span>Scrape New Articles</span></a>
+				</div>
 			</div>
 		</div>
 	</div>
 </nav>
 
-<header>
-	<div class="container">
-		<div class=""></div>
-		<div class="">
-			<h1>Scraper News</h1>
+<header class="hero is-primary is-bold">
+	<div class="hero-body">
+		<div class="container has-text-centered">
+			<h1 class="title">Scraper News</h1>
 			<hr>
-			<h3>All the News that's Fit to Scrape</h3>
+			<h2 class="subtitle">All the News that's Fit to Scrape</h2>
 		</div>
 	</div>
 </header>
 
-<main class="container">
-	<div id="articles-div">
-		
+<main>
+	<div class="container">
+		<div id="articles-div">
+			<div class="box">
+				<div class="content has-text-centered">
+					<p>Oops, no news articles!. Scrape for new articles, <a id="scrape">click here.</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </main>
+
+<div class="modal">
+<div class="modal-background"></div>
+<div class="modal-card">
+	<header class="modal-card-head">
+		<p class="modal-card-title">Article Notes</p>
+		<button class="delete" id="close"></button>
+	</header>
+	<section class="modal-card-body">
+		<div id="modal-notes">
+			<!-- Notes... -->
+		</div>
+	</section>
+	<footer class="modal-card-foot">
+		<form>
+			<div class="field">
+				<label class="label">Add Note</label>
+				<div class="control">
+					<input type="text" id="author" class="input" placeholder="Enter Your Name Here">
+				</div>
+			</div>
+			<div class="field">
+				<div class="control">
+					<textarea id="body" class="textarea" placeholder="Enter Note Here"></textarea>
+				</div>
+			</div>
+			<div class="field">
+				<div class="control">
+					<button class="button is-primary is-pulled-right save-note">Save Note</button>
+				</div>
+			</div>
+		</form>
+	</footer>
+</div>
+</div>
